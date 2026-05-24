@@ -106,3 +106,11 @@ MAPE after aligning held-out actual and predicted daily spending.
 2. Compare categorization rules against the TF-IDF pipeline.
 3. Add behavioral features for recurring bills, impulse spending, and lifestyle
    inflation once the baseline metrics are recorded.
+
+## Dataset
+
+For the MVP, CashCast uses synthetic transaction data.
+
+The generator includes salary cycles, rent, subscriptions, weekend spending, utilities, shopping, and seasonal spending spikes.
+
+This allows the forecasting and categorization pipeline to be tested without using sensitive personal bank data.

@@ -113,4 +113,28 @@ For the MVP, CashCast uses synthetic transaction data.
 
 The generator includes salary cycles, rent, subscriptions, weekend spending, utilities, shopping, and seasonal spending spikes.
 
+## Transaction Preprocessing
+
+Bank statement descriptions are often noisy and inconsistent.
+
+Examples:
+
+- UPI-ZOMATO-78492
+- SWIGGYPAY-1122
+- AMAZONINDIA-PAY-8832
+- NEFT-HDFC-RENT
+
+CashCast cleans transaction descriptions by removing transfer noise, transaction IDs, special characters, and inconsistent formatting.
+
+## Expense Categorization
+
+For the MVP, CashCast uses a TF-IDF + Logistic Regression pipeline for expense categorization.
+
+This approach was chosen because it is:
+
+- fast
+- explainable
+- suitable for small datasets
+- easy to deploy inside a Streamlit app
+
 This allows the forecasting and categorization pipeline to be tested without using sensitive personal bank data.

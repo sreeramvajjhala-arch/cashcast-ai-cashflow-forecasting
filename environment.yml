@@ -1,0 +1,16 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - joblib>=1.4
+    - matplotlib>=3.8
+    - numpy>=1.26
+    - pandas>=2.2
+    - prophet>=1.1
+    - pytest>=8.2
+    - scikit-learn>=1.5
+    - streamlit>=1.36

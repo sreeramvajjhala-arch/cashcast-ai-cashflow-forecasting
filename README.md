@@ -138,3 +138,31 @@ This approach was chosen because it is:
 - easy to deploy inside a Streamlit app
 
 This allows the forecasting and categorization pipeline to be tested without using sensitive personal bank data.
+## Forecasting Approach
+
+CashCast forecasts category-wise spending instead of raw transactions.
+
+This makes the output more actionable.
+
+Example:
+
+- Food: ₹7,800
+- Transport: ₹2,400
+- Shopping: ₹3,200
+- Utilities: ₹2,100
+
+The MVP includes two forecasting paths:
+
+1. Fast baseline forecast  
+   Uses recent daily category averages. This keeps the dashboard responsive.
+
+2. Prophet forecast  
+   Models trend and seasonality for richer time-series forecasting.
+
+## Evaluation Metrics
+
+Forecasting experiments can be evaluated using:
+
+- MAE
+- RMSE
+- MAPE

@@ -138,3 +138,32 @@ This approach was chosen because it is:
 - easy to deploy inside a Streamlit app
 
 This allows the forecasting and categorization pipeline to be tested without using sensitive personal bank data.
+
+## Risk Analysis
+
+CashCast converts forecasted spending into a cash-flow risk score.
+
+The risk engine estimates:
+
+- expected income
+- expected expenses
+- projected balance
+- deficit amount
+- deficit date
+- risk level
+
+Risk levels:
+
+- 0-30: Safe
+- 31-60: Moderate
+- 61-100: High Risk
+
+## Recommendations
+
+The MVP uses rule-based recommendations for explainability.
+
+Example:
+
+If recent Food spending is significantly above the earlier monthly average, CashCast flags it as a spending concern.
+
+This keeps the recommendation layer simple, transparent, and easy to debug.
